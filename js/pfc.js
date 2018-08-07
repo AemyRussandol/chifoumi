@@ -22,43 +22,43 @@ while ((userChoice != "pierre") && (userChoice != "feuille") && (userChoice != "
   }
   
   if (userChoice === iaChoice) {
-    console.log("égalité");
+    alert("égalité");
   }
 
   else if ((userChoice == "pierre") && (iaChoice == "feuille")) {
-    console.log("perdu !");
+    alert("perdu !");
     scoreIA ++;
   } 
 
   else if ((userChoice == "pierre") && (iaChoice == "ciseaux")) {
-    console.log("gagné !");
+    alert("gagné !");
     scoreUser ++;
   } 
 
   else if ((userChoice == "feuille") && (iaChoice == "ciseaux")) {
-    console.log("perdu !");
+    alert("perdu !");
     scoreIA ++;
   }
 
   else if ((userChoice == "feuille") && (iaChoice == "pierre" )) {
-    console.log("gagné !");
+    alert("gagné !");
     scoreUser ++;
   } 
 
   else if ((userChoice == "ciseaux") && (iaChoice == "pierre")) {
-    console.log("perdu !");
+    alert("perdu !");
     scoreIA ++;
   } 
 
   else if ((userChoice == "ciseaux") && (iaChoice == "feuille")) {
-    console.log("gagné !");
+    alert("gagné !");
     scoreUser ++;
   } 
 }
 if (scoreUser == 3) {
-    console.log("Bravo ! Vous m'avez vaincu... Mais je n'ai pas dis mon dernier mot!");
+    alert("Bravo ! Vous m'avez vaincu... Mais je n'ai pas dis mon dernier mot!");
 }
 if (scoreIA == 3) {
-    console.log("MOUAHAHAHAHA! Vous êtes venus, vous avez vu, vous avez ... PERDU!");
+    alert("MOUAHAHAHAHA! Vous êtes venus, vous avez vu, vous avez ... PERDU!");
 }
-console.log("Partie terminée.\n Resumé des scores: \n Joueur : " + scoreUser + " points. \n IA : " + scoreIA + " points.");
+alert("Partie terminée.\n Resumé des scores: \n Joueur : " + scoreUser + " points. \n IA : " + scoreIA + " points.");
