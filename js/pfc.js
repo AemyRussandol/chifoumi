@@ -2,7 +2,7 @@ var scoreIA = 0;
 var scoreUser = 0;
 
 while ( (scoreIA < 3) && (scoreUser < 3) ) {
-var userChoice = prompt("Choisissez entre pierre, feuille et ciseaux");
+var userChoice = prompt("Choisissez entre pierre, feuille et ciseaux (Attention ! Je suis sensible à la casse :)");
 var iaChoice = Math.floor(Math.random() * Math.floor(3));
   
 while ((userChoice != "pierre") && (userChoice != "feuille") && (userChoice != "ciseaux")) {
@@ -55,5 +55,10 @@ while ((userChoice != "pierre") && (userChoice != "feuille") && (userChoice != "
     scoreUser ++;
   } 
 }
-
+if (scoreUser == 3) {
+    console.log("Bravo ! Vous m'avez vaincu... Mais je n'ai pas dis mon dernier mot!");
+}
+if (scoreIA == 3) {
+    console.log("MOUAHAHAHAHA! Vous êtes venus, vous avez vu, vous avez ... PERDU!");
+}
 console.log("Partie terminée.\n Resumé des scores: \n Joueur : " + scoreUser + " points. \n IA : " + scoreIA + " points.");
