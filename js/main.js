@@ -695,6 +695,7 @@ Activité : jeu de devinette
 
 
 // INTRODUCTION AVANCES
+
 // EXERCICE 1
 // var empty = "";
 // var filled = "Je contient une phrase";
@@ -745,4 +746,14 @@ Activité : jeu de devinette
 // EXERCICE 5 
 // var nom = prompt("Saisissez votre nom");
 // var prenom = prompt("Saisissez maitnenant votre prénom");
+// var longueurNom = nom.length; // pour définir la longueur du mot
+// var longueurPrenom = prenom.length;
 
+// alert("votre nom commence par la lettre " + nom[0].toUpperCase());
+// alert("votre nom termine par la lettre " + (nom[longueurNom - 1].toUpperCase())); // INDIQUE DE PRENDRE LE DERNIER CARACTERE DU MOT 
+// alert("votre prénom commence par la lettre " + prenom[0].toUpperCase());
+// alert("votre prénom termine par la lettre " + (prenom[longueurPrenom - 1].toUpperCase()));
+
+
+
+// EXERCICE 6

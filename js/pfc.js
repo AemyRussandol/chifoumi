@@ -1,44 +1,59 @@
-// Vous allez réaliser un jeu de pierre, feuille, ciseaux en JavaScript.
+var scoreIA = 0;
+var scoreUser = 0;
 
-// Vous demanderez à l'utilisateur de choisir "pierre", "feuille" ou "ciseaux" à l'aide d'un prompt, 
-// vous déterminerez au hasard le choix de l'ordinateur, puis vous comparerez le choix de l'utilisateur 
-// et le choix de l'ordinateur pour afficher qui a gagné, ou si vous êtes à égalité.
+while ( (scoreIA < 3) && (scoreUser < 3) ) {
+var userChoice = prompt("Choisissez entre pierre, feuille et ciseaux");
+var iaChoice = Math.floor(Math.random() * Math.floor(3));
+  
+while ((userChoice != "PIERRE") && (userChoice != "FEUILLE") && (userChoice != "CISEAUX")) {
+  var userChoice = prompt("Choisissez entre pierre, feuille et ciseaux");
+}
 
-// Pour aller plus loin:
-
-// Si l'utilisateur entre autre chose que "pierre", "feuille", ou "ciseaux", 
-// demandez lui de rentrer une valeur correcte. 
-// Le jeu doit se relancer jusqu'à ce qu'un des joueurs ait obtenu 3 points.
-
-var choixUser = prompt("Choisissez entre pierre, feuille et ciseaux");
-var generated = ["pierre", "feuille", "ciseaux"];
-
-while ((choixUser == pierre) || (choixUser == feuille) || (choixUser == ciseaux)) {
-    var choixUser = prompt("Choisissez entre pierre, feuille et ciseaux");
-if (choixUser === generated) {
+  if (iaChoice === 0) {
+    iaChoice = "pierre";
+  }
+  
+  else if (iaChoice === 1) {
+    iaChoice = "feuille";
+  }
+  
+  else {
+    iaChoice = "ciseaux";
+  }
+  
+  if (userChoice === iaChoice) {
     console.log("égalité");
+  }
+
+  else if ((userChoice == "PIERRE") && (iaChoice == "feuille")) {
+    console.log("perdu !");
+    scoreIA ++;
+  } 
+
+  else if ((userChoice == "pierre") && (iaChoice == "ciseaux")) {
+    console.log("gagné !");
+    scoreUser ++;
+  } 
+
+  else if ((userChoice == "feuille") && (iaChoice == "ciseaux")) {
+    console.log("perdu !");
+    scoreIA ++;
+  }
+
+  else if ((userChoice == "feuille") && (iaChoice == "pierre" )) {
+    console.log("gagné !");
+    scoreUser ++;
+  } 
+
+  else if ((userChoice == "ciseaux") && (iaChoice == "pierre")) {
+    console.log("perdu !");
+    scoreIA ++;
+  } 
+
+  else if ((userChoice == "ciseaux") && (iaChoice == "feuille")) {
+    console.log("gagné !");
+    scoreUser ++;
+  } 
 }
 
-else if ((choixUser == pierre) && (generated[2])) {
-    console.log("perdu !");
-} 
-
-else if ((choixUser == pierre) && (generated[3])) {
-    console.log("gagné !");
-} 
-
-else if ((choixUser == feuille) && (generated[3])) {
-    console.log("perdu !");
-}
-
-else if ((choixUser == feuille) && (generated[1])) {
-    console.log("gagné !");
-} 
-
-else if ((choixUser == ciseaux) && (generated[1])) {
-    console.log("perdu !");
-} 
-
-else if ((choixUser == ciseaux) && (generated[2])) {
-    console.log("gagné !");
-} }
+console.log("Partie terminée.")
