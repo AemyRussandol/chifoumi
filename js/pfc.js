@@ -5,8 +5,8 @@ while ( (scoreIA < 3) && (scoreUser < 3) ) {
 var userChoice = prompt("Choisissez entre pierre, feuille et ciseaux");
 var iaChoice = Math.floor(Math.random() * Math.floor(3));
   
-while ((userChoice != "PIERRE") && (userChoice != "FEUILLE") && (userChoice != "CISEAUX")) {
-  var userChoice = prompt("Choisissez entre pierre, feuille et ciseaux");
+while ((userChoice != "pierre") && (userChoice != "feuille") && (userChoice != "ciseaux")) {
+  userChoice = prompt("Choisissez entre pierre, feuille et ciseaux");
 }
 
   if (iaChoice === 0) {
@@ -25,7 +25,7 @@ while ((userChoice != "PIERRE") && (userChoice != "FEUILLE") && (userChoice != "
     console.log("égalité");
   }
 
-  else if ((userChoice == "PIERRE") && (iaChoice == "feuille")) {
+  else if ((userChoice == "pierre") && (iaChoice == "feuille")) {
     console.log("perdu !");
     scoreIA ++;
   } 
