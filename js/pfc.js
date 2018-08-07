@@ -56,4 +56,4 @@ while ((userChoice != "pierre") && (userChoice != "feuille") && (userChoice != "
   } 
 }
 
-console.log("Partie terminée.")
+console.log("Partie terminée.\n Resumé des scores: \n Joueur : " + scoreUser + " points. \n IA : " + scoreIA + " points.");
